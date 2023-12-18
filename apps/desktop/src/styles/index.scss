@@ -1,0 +1,41 @@
+@import "./normalize.scss";
+@import "./search-page.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  -webkit-app-region: drag;
+  box-sizing: border-box;
+  * {
+    box-sizing: inherit;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(60deg, #FF387030, #A990FF30, #57CFEF30, #7FEA9630, #FFE97430);
+  background-size: 300% 300%;
+  animation: gradient 4s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  * {
+    -webkit-app-region: no-drag;
+  }
+}
